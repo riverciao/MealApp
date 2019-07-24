@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF7EE92422E8766400C8CBE0 /* MealListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7EE92222E8766400C8CBE0 /* MealListViewController.swift */; };
+		CF7EE92522E8766400C8CBE0 /* MealListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7EE92322E8766400C8CBE0 /* MealListViewController.xib */; };
+		CF7EE92822E87F9B00C8CBE0 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7EE92622E87F9B00C8CBE0 /* MealDetailViewController.swift */; };
+		CF7EE92922E87F9B00C8CBE0 /* MealDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7EE92722E87F9B00C8CBE0 /* MealDetailViewController.xib */; };
 		CFBF1CF422C38BCA003F3734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBF1CF322C38BCA003F3734 /* AppDelegate.swift */; };
 		CFBF1CF622C38BCA003F3734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBF1CF522C38BCA003F3734 /* ViewController.swift */; };
 		CFBF1CF922C38BCA003F3734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBF1CF722C38BCA003F3734 /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF7EE92222E8766400C8CBE0 /* MealListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewController.swift; sourceTree = "<group>"; };
+		CF7EE92322E8766400C8CBE0 /* MealListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealListViewController.xib; sourceTree = "<group>"; };
+		CF7EE92622E87F9B00C8CBE0 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
+		CF7EE92722E87F9B00C8CBE0 /* MealDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailViewController.xib; sourceTree = "<group>"; };
 		CFBF1CF022C38BCA003F3734 /* MealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBF1CF322C38BCA003F3734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBF1CF522C38BCA003F3734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +64,10 @@
 			children = (
 				CFBF1CF322C38BCA003F3734 /* AppDelegate.swift */,
 				CFBF1CF522C38BCA003F3734 /* ViewController.swift */,
+				CF7EE92222E8766400C8CBE0 /* MealListViewController.swift */,
+				CF7EE92322E8766400C8CBE0 /* MealListViewController.xib */,
+				CF7EE92622E87F9B00C8CBE0 /* MealDetailViewController.swift */,
+				CF7EE92722E87F9B00C8CBE0 /* MealDetailViewController.xib */,
 				CFBF1CF722C38BCA003F3734 /* Main.storyboard */,
 				CFBF1CFA22C38BCD003F3734 /* Assets.xcassets */,
 				CFBF1CFC22C38BCD003F3734 /* LaunchScreen.storyboard */,
@@ -123,6 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFBF1CFE22C38BCD003F3734 /* LaunchScreen.storyboard in Resources */,
+				CF7EE92522E8766400C8CBE0 /* MealListViewController.xib in Resources */,
+				CF7EE92922E87F9B00C8CBE0 /* MealDetailViewController.xib in Resources */,
 				CFBF1CFB22C38BCD003F3734 /* Assets.xcassets in Resources */,
 				CFBF1CF922C38BCA003F3734 /* Main.storyboard in Resources */,
 			);
@@ -136,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFBF1CF622C38BCA003F3734 /* ViewController.swift in Sources */,
+				CF7EE92422E8766400C8CBE0 /* MealListViewController.swift in Sources */,
+				CF7EE92822E87F9B00C8CBE0 /* MealDetailViewController.swift in Sources */,
 				CFBF1CF422C38BCA003F3734 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
