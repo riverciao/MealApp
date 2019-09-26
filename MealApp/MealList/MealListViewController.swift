@@ -12,6 +12,7 @@ class MealListViewController: UIViewController, UITableViewDelegate, UITableView
   
   @IBOutlet weak var addMealButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
+  var dataSource = [MealModel]()
   
   // MARK: - View life cycle
   
@@ -23,6 +24,14 @@ class MealListViewController: UIViewController, UITableViewDelegate, UITableView
     tableView.dataSource = self
     
     tableView.register(UINib(nibName: MealTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MealTableViewCell.identifier)
+    
+    dataSource = [
+      MealModel(title: "1", imageName: "ebi"),
+      MealModel(title: "2", imageName: "ebi"),
+      MealModel(title: "3", imageName: "ebi"),
+      MealModel(title: "4", imageName: "ebi"),
+      MealModel(title: "5", imageName: "ebi")
+    ]
   }
   
   @objc func addMealButtonAction() {
@@ -36,13 +45,14 @@ class MealListViewController: UIViewController, UITableViewDelegate, UITableView
   // MARK: - UITableViewDelegate
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    return dataSource.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: MealTableViewCell.identifier, for: indexPath) as! MealTableViewCell
-    cell.mealImageView.image = UIImage(named: "ebi")
-    cell.titleLabel.text = "好吃ㄉ"
+    let model = dataSource[indexPath.row]
+    cell.mealImageView.image = UIImage(named: model.imageName)
+    cell.titleLabel.text = model.title
     return cell
   }
 }

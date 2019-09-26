@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D1B62551E2C40AE568C4319 /* Pods_MealApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84399C89118D36AD2288191 /* Pods_MealApp.framework */; };
+		CF0D541F233B8EA900E14BB2 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D541E233B8EA900E14BB2 /* MealModel.swift */; };
 		CF7EE92422E8766400C8CBE0 /* MealListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7EE92222E8766400C8CBE0 /* MealListViewController.swift */; };
 		CF7EE92522E8766400C8CBE0 /* MealListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7EE92322E8766400C8CBE0 /* MealListViewController.xib */; };
 		CF7EE92822E87F9B00C8CBE0 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7EE92622E87F9B00C8CBE0 /* MealDetailViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		970039ED22E81867B2408EB8 /* Pods-MealApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealApp.debug.xcconfig"; path = "Target Support Files/Pods-MealApp/Pods-MealApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CF0D541E233B8EA900E14BB2 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		CF7EE92222E8766400C8CBE0 /* MealListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewController.swift; sourceTree = "<group>"; };
 		CF7EE92322E8766400C8CBE0 /* MealListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealListViewController.xib; sourceTree = "<group>"; };
 		CF7EE92622E87F9B00C8CBE0 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		CFBF1CFA22C38BCD003F3734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFBF1CFD22C38BCD003F3734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFBF1CFF22C38BCD003F3734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1D5A457BEE356ABA290D1AE /* Pods-MealApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealApp.release.xcconfig"; path = "Target Support Files/Pods-MealApp/Pods-MealApp.release.xcconfig"; sourceTree = "<group>"; };
+		E84399C89118D36AD2288191 /* Pods_MealApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +47,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1B62551E2C40AE568C4319 /* Pods_MealApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A452308BE3A3370B5D4249F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				970039ED22E81867B2408EB8 /* Pods-MealApp.debug.xcconfig */,
+				E1D5A457BEE356ABA290D1AE /* Pods-MealApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF6243A9FD3467440D7D47B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E84399C89118D36AD2288191 /* Pods_MealApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF8E06AD23291C9C00E9ABF9 /* MealList */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +79,7 @@
 				CF7EE92322E8766400C8CBE0 /* MealListViewController.xib */,
 				CF8E06A923291C8C00E9ABF9 /* MealTableViewCell.swift */,
 				CF8E06AA23291C8C00E9ABF9 /* MealTableViewCell.xib */,
+				CF0D541E233B8EA900E14BB2 /* MealModel.swift */,
 			);
 			path = MealList;
 			sourceTree = "<group>";
@@ -63,6 +89,8 @@
 			children = (
 				CFBF1CF222C38BCA003F3734 /* MealApp */,
 				CFBF1CF122C38BCA003F3734 /* Products */,
+				6A452308BE3A3370B5D4249F /* Pods */,
+				CF6243A9FD3467440D7D47B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFBF1D0222C38BCD003F3734 /* Build configuration list for PBXNativeTarget "MealApp" */;
 			buildPhases = (
+				1081820CD7AFBD6001BF6527 /* [CP] Check Pods Manifest.lock */,
 				CFBF1CEC22C38BCA003F3734 /* Sources */,
 				CFBF1CED22C38BCA003F3734 /* Frameworks */,
 				CFBF1CEE22C38BCA003F3734 /* Resources */,
+				F3D46FD37D1446C819050713 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +189,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1081820CD7AFBD6001BF6527 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MealApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3D46FD37D1446C819050713 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MealApp/Pods-MealApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MealApp/Pods-MealApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MealApp/Pods-MealApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFBF1CEC22C38BCA003F3734 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -168,6 +240,7 @@
 				CF7EE92422E8766400C8CBE0 /* MealListViewController.swift in Sources */,
 				CF7EE92822E87F9B00C8CBE0 /* MealDetailViewController.swift in Sources */,
 				CFBF1CF422C38BCA003F3734 /* AppDelegate.swift in Sources */,
+				CF0D541F233B8EA900E14BB2 /* MealModel.swift in Sources */,
 				CF8E06AB23291C8C00E9ABF9 /* MealTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +385,7 @@
 		};
 		CFBF1D0322C38BCD003F3734 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 970039ED22E81867B2408EB8 /* Pods-MealApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -329,6 +403,7 @@
 		};
 		CFBF1D0422C38BCD003F3734 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D5A457BEE356ABA290D1AE /* Pods-MealApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
