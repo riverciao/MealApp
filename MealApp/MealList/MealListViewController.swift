@@ -30,6 +30,10 @@ class MealListViewController: UIViewController, UITableViewDelegate, UITableView
       MealModel(title: "2", imageName: "ebi"),
       MealModel(title: "3", imageName: "ebi"),
       MealModel(title: "4", imageName: "ebi"),
+      MealModel(title: "5", imageName: "ebi"),
+      MealModel(title: "2", imageName: "ebi"),
+      MealModel(title: "3", imageName: "ebi"),
+      MealModel(title: "4", imageName: "ebi"),
       MealModel(title: "5", imageName: "ebi")
     ]
   }
@@ -42,7 +46,7 @@ class MealListViewController: UIViewController, UITableViewDelegate, UITableView
     }
   }
   
-  // MARK: - UITableViewDelegate
+  // MARK: - UITableViewDataSource
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return dataSource.count
@@ -51,8 +55,8 @@ class MealListViewController: UIViewController, UITableViewDelegate, UITableView
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: MealTableViewCell.identifier, for: indexPath) as! MealTableViewCell
     let model = dataSource[indexPath.row]
-    cell.mealImageView.image = UIImage(named: model.imageName)
-    cell.titleLabel.text = model.title
+    cell.setup(with: model)
+    print("cell \(cell) at indexPath \(indexPath)")
     return cell
   }
 }

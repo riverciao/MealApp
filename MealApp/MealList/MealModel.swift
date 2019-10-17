@@ -6,8 +6,13 @@
 //  Copyright © 2019 Pinkoi. All rights reserved.
 //
 
-struct MealModel {
+class MealModel {
   let title: String
   let imageName: String
-
+  var isFav: Bool = false
+  
+  init(title: String, imageName: String) {
+    self.title = title
+    self.imageName = imageName
+  }
 }
