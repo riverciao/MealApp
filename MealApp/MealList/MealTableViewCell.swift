@@ -52,7 +52,18 @@ class MealTableViewCell: UITableViewCell {
   
   func setup(with model: MealModel) {
     self.model = model
-    mealImageView.image = UIImage(named: model.imageName)
+    if let imageName = model.imageName {
+      mealImageView.image = UIImage(named: imageName)
+    }
+    if let imageUrlStr = model.imageUrlStr {
+      guard
+        let imageUrl = URL(string: imageUrlStr),
+        let imageData = try? Data(contentsOf: imageUrl),
+        let image = UIImage(data: imageData)
+      else { return }
+      
+      mealImageView.image = image
+    }
     titleLabel.text = model.title
     favButton.isSelected = model.isFav
   }

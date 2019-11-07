@@ -17,6 +17,7 @@ class MealDetailViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var contentImageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var closeButton: UIButton!
+  @IBOutlet weak var saveButton: UIButton!
   var name: String?
   
   @IBOutlet weak var mealNameTextField: UITextField!
@@ -26,12 +27,22 @@ class MealDetailViewController: UIViewController, UITextFieldDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     closeButton.addTarget(self, action: #selector(closeButtonAction), for: .touchUpInside)
+    saveButton.addTarget(self, action: #selector(saveButtonAction), for: .touchUpInside)
     mealNameTextField.delegate = self
+    nameLabel.text = "餐點名稱"
+    contentImageView.image = UIImage(named: "ebi")
+    saveButton.setTitle("儲存", for: .normal)
   }
   
   @objc func closeButtonAction() {
     print("closeButtonAction")
     dismiss(animated: true, completion: nil)
+  }
+  
+  @objc func saveButtonAction() {
+    print("saveButtonAction")
+    delegate?.mealDetailViewController(didGetMealName: mealNameTextField.text)
+    dismiss(animated: true)
   }
   
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -40,7 +51,5 @@ class MealDetailViewController: UIViewController, UITextFieldDelegate {
   }
   
   func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-    print("get text\(textField.text)")
-    delegate?.mealDetailViewController(didGetMealName: textField.text)
   }
 }

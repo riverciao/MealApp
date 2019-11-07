@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MealListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MealListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MealDetailViewControllerDelegate {
+  
   
   @IBOutlet weak var addMealButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
@@ -25,25 +26,19 @@ class MealListViewController: UIViewController, UITableViewDelegate, UITableView
     
     tableView.register(UINib(nibName: MealTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MealTableViewCell.identifier)
     
-    dataSource = [
-      MealModel(title: "1", imageName: "ebi"),
-      MealModel(title: "2", imageName: "ebi"),
-      MealModel(title: "3", imageName: "ebi"),
-      MealModel(title: "4", imageName: "ebi"),
-      MealModel(title: "5", imageName: "ebi"),
-      MealModel(title: "2", imageName: "ebi"),
-      MealModel(title: "3", imageName: "ebi"),
-      MealModel(title: "4", imageName: "ebi"),
-      MealModel(title: "5", imageName: "ebi")
-    ]
+    let service = MealListService()
+    service.fetchMealList { [weak self] (mealList) in
+      self?.dataSource = mealList
+      DispatchQueue.main.async {
+        self?.tableView.reloadData()
+      }
+    }
   }
   
   @objc func addMealButtonAction() {
-    print("ya")
     let detailVC = MealDetailViewController()
-    present(detailVC, animated: true) {
-      print("yaya")
-    }
+    detailVC.delegate = self
+    present(detailVC, animated: true)
   }
   
   // MARK: - UITableViewDataSource
@@ -58,5 +53,13 @@ class MealListViewController: UIViewController, UITableViewDelegate, UITableView
     cell.setup(with: model)
     print("cell \(cell) at indexPath \(indexPath)")
     return cell
+  }
+  
+  // MARK: - MealDetailViewControllerDelegate
+  
+  func mealDetailViewController(didGetMealName: String?) {
+    guard let mealName = didGetMealName else { return }
+    dataSource.append(MealModel(title: mealName, imageName: "ebi"))
+    tableView.reloadData()
   }
 }
